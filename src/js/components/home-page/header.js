@@ -8,7 +8,7 @@ export function createHomePageHero(header) {
     const $hero = (
         $(`<article class="page__hero" style="--background-image: url(${backgroundImage})" data-aos="fade-up">`).append(
             $('<h1 class="page-title">').text(title),
-            $('<div class="page-text">').text(aboutAuthor)
+            $('<h4 class="page-text">').text(aboutAuthor)
         )
     );
     
