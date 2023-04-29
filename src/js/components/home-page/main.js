@@ -19,7 +19,7 @@ export async function createHomePageMain() {
 }
 
 async function getCharacter() {
-    let random = getRandom();
+    let random = await getRandom();
     let response = await fetch((URL + `/character/${random}`));
     let json = await response.json();
     return (
@@ -38,8 +38,11 @@ async function getCharacter() {
     )
 }
 
-function getRandom() {
-    return Math.floor(Math.random() * 826)
+async function getRandom() {
+    let response = await fetch((URL + '/character/'));
+    let json = await response.json();
+    let count = json.info.count
+    return Math.floor(Math.random() * count)
 }
 
 export async function findData(id, className) {
