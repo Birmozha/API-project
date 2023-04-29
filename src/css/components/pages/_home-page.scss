@@ -40,6 +40,11 @@
                             weight: 400;
                         }
                     }
+                    @media (max-width: 1399.98px) {
+                        .page-text {
+                            font-size: 30px;
+                        }
+                    }
                 }
             }
 
@@ -203,6 +208,12 @@
                             background-color: rgb(132, 121, 224);
                         }
                     }
+                }
+            }
+
+            @media (max-width: 1399.98px) {
+                &.page__section_main {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
         }
